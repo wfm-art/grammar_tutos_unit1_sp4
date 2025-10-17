@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tutoriales de Gramática / Grammar Tutorials – Unidad 1</title>
+  <style>
+    :root { --bg:#f7f7fb; --card:#fff; --ink:#1f2430; --muted:#5b6275; --accent:#2d6cdf; --pill:#eef3ff; }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Noto Sans",sans-serif}
+    header{padding:24px 20px;border-bottom:1px solid #e7e9f2;background:linear-gradient(90deg,#edf2ff,#f7f8fc)}
+    h1{margin:0 0 6px;font-size:28px}
+    .sub{margin:0;color:var(--muted)}
+    .controls{display:grid;gap:12px;grid-template-columns:1fr; padding:16px 20px}
+    @media (min-width: 860px){ .controls{grid-template-columns:1fr 360px}}
+    .search input{width:100%;padding:12px 14px;border:1px solid #dfe3ee;border-radius:12px;font-size:16px}
+    .pillbar{display:flex;flex-wrap:wrap;gap:8px}
+    .pill{padding:8px 12px;border-radius:999px;background:var(--pill);border:1px solid #dbe3ff;cursor:pointer;font-size:14px}
+    .pill.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+    .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));padding:10px 20px 40px}
+    .card{background:var(--card);border:1px solid #eceff7;border-radius:16px;padding:14px;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+    .tag{display:inline-block;font-size:12px;padding:4px 8px;border-radius:999px;background:#eef6ff;border:1px solid #dbeafe;color:#234}
+    .title{margin:8px 0 6px;font-weight:700}
+    .desc{margin:0 0 10px;color:var(--muted)}
+    .links{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+    a.btn{display:inline-block;padding:8px 12px;border-radius:10px;border:1px solid #dfe3ee;text-decoration:none;color:var(--ink);background:#fafbff}
+    a.btn:hover{border-color:#cfd6ea}
+    .embed{margin-top:10px;border:1px solid #e5e8f3;border-radius:12px;overflow:hidden;aspect-ratio:16/9;background:#000}
+    iframe{width:100%;height:100%;border:0}
+    footer{padding:20px;color:#8a90a3;text-align:center;font-size:12px}
+    details{margin-top:8px}
+    summary{cursor:pointer;color:#334; font-weight:600}
+    .howto{padding:12px;border:1px dashed #cfe; background:#f7fbff; border-radius:10px; margin:12px 20px}
+    code{background:#f0f3ff;border:1px solid #dde6ff;padding:2px 6px;border-radius:6px}
+  </style>
+</head>
+<body>
+<header>
+  <h1>Tutoriales de Gramática / Grammar Tutorials – Unidad 1</h1>
+  <p class="sub">Carpeta índice con PDFs y videos. / Index page with PDFs and videos.</p>
+</header>
+
+<section class="howto">
+  <b>Cómo incrustar archivos de Google Drive (ES / EN):</b><br/>
+  1) En Drive, abre el archivo → Compartir → “Cualquier persona con el enlace” (al menos Visor).<br/>
+  2) Copia el ID del archivo desde la URL: <code>https://drive.google.com/file/d/<b>FILE_ID</b>/view</code>.<br/>
+  3) Para video/PDF incrustado usa: <code>https://drive.google.com/file/d/<b>FILE_ID</b>/preview</code> en el iframe.<br/>
+  4) Para enlace de descarga/visualización directa, puedes usar la URL de “Compartir” normal.<br/>
+</section>
+
+<section class="controls">
+  <div class="search">
+    <input id="q" type="search" placeholder="Buscar / Search (e.g., participios, connectors, futuro, APA)">
+  </div>
+  <div class="pillbar" id="cats">
+    <span class="pill active" data-cat="all">Todas / All</span>
+    <span class="pill" data-cat="presente">Presente / Present</span>
+    <span class="pill" data-cat="futuro">Futuro / Future</span>
+    <span class="pill" data-cat="participios">Participios / Past participles</span>
+    <span class="pill" data-cat="concesivas">Cláusulas concesivas</span>
+    <span class="pill" data-cat="conectores">Conectores / Connectors</span>
+    <span class="pill" data-cat="apa">Citas APA</span>
+  </div>
+</section>
+
+<main class="grid" id="grid">
+
+  <!-- ======== EJEMPLOS – Reemplaza FILE_ID por tus IDs de Drive ======== -->
+
+  <article class="card" data-cat="futuro conectores">
+    <span class="tag">Futuro · Connectors</span>
+    <div class="title">Conectores lógicos en contexto (PDF)</div>
+    <p class="desc">Explicación breve + ejemplos equivalentes (por eso, ya que, además, en conclusión).</p>
+    <div class="links">
+      <a class="btn" href="https://drive.google.com/file/d/FILE_ID_PDF/view" target="_blank">Abrir en Drive</a>
+    </div>
+    <details>
+      <summary>Ver incrustado / Preview embed</summary>
+      <div class="embed">
+        <iframe src="https://drive.google.com/file/d/FILE_ID_PDF/preview" allow="autoplay"></iframe>
+      </div>
+    </details>
+  </article>
+
+  <article class="card" data-cat="participios">
+    <span class="tag">Participios</span>
+    <div class="title">Participios pasados como adjetivos (Video)</div>
+    <p class="desc">Guía de uso y concordancia. Ejemplos: hecho/a, escrito/a, abierto/a.</p>
+    <div class="links">
+      <a class="btn" href="https://drive.google.com/file/d/FILE_ID_VIDEO/view" target="_blank">Abrir video en Drive</a>
+    </div>
+    <details>
+      <summary>Ver video incrustado</summary>
+      <div class="embed">
+        <iframe src="https://drive.google.com/file/d/FILE_ID_VIDEO/preview" allow="autoplay"></iframe>
+      </div>
+    </details>
+  </article>
+
+  <article class="card" data-cat="presente conectores">
+    <span class="tag">Presente · Connectors</span>
+    <div class="title">Presente y conectores en la vida cotidiana (PDF)</div>
+    <p class="desc">Modelo de oraciones con conectores de causa y consecuencia.</p>
+    <div class="links">
+      <a class="btn" href="https://drive.google.com/file/d/FILE_ID_PDF2/view" target="_blank">Abrir en Drive</a>
+    </div>
+    <details>
+      <summary>Ver incrustado</summary>
+      <div class="embed">
+        <iframe src="https://drive.google.com/file/d/FILE_ID_PDF2/preview"></iframe>
+      </div>
+    </details>
+  </article>
+
+  <article class="card" data-cat="concesivas">
+    <span class="tag">Cláusulas concesivas</span>
+    <div class="title">Aunque / A pesar de que (PDF)</div>
+    <p class="desc">Cuándo usar indicativo o subjuntivo; diferencias clave y ejemplos.</p>
+    <div class="links">
+      <a class="btn" href="https://drive.google.com/file/d/FILE_ID_CONCESIVAS/view" target="_blank">Abrir en Drive</a>
+    </div>
+    <details>
+      <summary>Ver incrustado</summary>
+      <div class="embed">
+        <iframe src="https://drive.google.com/file/d/FILE_ID_CONCESIVAS/preview"></iframe>
+      </div>
+    </details>
+  </article>
+
+  <article class="card" data-cat="apa">
+    <span class="tag">APA</span>
+    <div class="title">Citas y referencias (APA) – Mini guía (PDF)</div>
+    <p class="desc">Citas narrativas y parentéticas; referencias básicas y uso de Zoterobib.</p>
+    <div class="links">
+      <a class="btn" href="https://drive.google.com/file/d/FILE_ID_APA/view" target="_blank">Abrir en Drive</a>
+    </div>
+    <details>
+      <summary>Ver incrustado</summary>
+      <div class="embed">
+        <iframe src="https://drive.google.com/file/d/FILE_ID_APA/preview"></iframe>
+      </div>
+    </details>
+  </article>
+
+</main>
+
+<footer>
+  © Curso de Español – Índice de Tutoriales (Unidad 1). Edita este HTML para añadir/quitar recursos.
+</footer>
+
+<script>
+  const q = document.getElementById('q');
+  const pills = Array.from(document.querySelectorAll('.pill'));
+  const cards = Array.from(document.querySelectorAll('.card'));
+  let activeCat = 'all';
+
+  function applyFilters(){
+    const text = q.value.toLowerCase().trim();
+    cards.forEach(c => {
+      const cats = (c.getAttribute('data-cat') || '').toLowerCase().split(' ');
+      const matchCat = (activeCat === 'all' || cats.includes(activeCat));
+      const matchText = (text === '' || c.textContent.toLowerCase().includes(text));
+      c.style.display = (matchCat && matchText) ? '' : 'none';
+    });
+  }
+
+  q.addEventListener('input', applyFilters);
+  pills.forEach(p => {
+    p.addEventListener('click', () => {
+      pills.forEach(x => x.classList.remove('active'));
+      p.classList.add('active');
+      activeCat = p.dataset.cat;
+      applyFilters();
+    });
+  });
+</script>
+</body>
+</html>
